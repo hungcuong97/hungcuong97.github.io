@@ -25,8 +25,8 @@ Biến global có thể được truy cập từ bất cứ đâu trong chương
   Function Scope:
 Biến được khai báo cục bộ (bên trong một function) thì sẽ có Function Scope.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Scope và Closures trong JavaScript">
-<meta name="twitter:title" content="Scope và Closures trong JavaScript">
+<meta property="og:title" content="Scope và Closure trong JavaScript">
+<meta name="twitter:title" content="Scope và Closure trong JavaScript">
 <meta property="og:url" content="https://hungcuong97.github.io/post/scope-closures/">
 <meta property="twitter:url" content="https://hungcuong97.github.io/post/scope-closures/">
 <meta property="og:site_name" content="Cuongth Blog">
@@ -77,7 +77,7 @@ Biến được khai báo cục bộ (bên trong một function) thì sẽ có F
   <meta property="twitter:image" content="https://hungcuong97.github.io/images/avatar.jpg">
 
 
-    <title>Scope và Closures trong JavaScript</title>
+    <title>Scope và Closure trong JavaScript</title>
 
     <link rel="icon" href="https://hungcuong97.github.io/favicon.png">
     
@@ -194,7 +194,7 @@ Biến được khai báo cục bộ (bên trong một function) thì sẽ có F
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      Scope và Closures trong JavaScript
+      Scope và Closure trong JavaScript
     </h1>
   
   
@@ -241,6 +241,25 @@ Biến được khai báo cục bộ (bên trong một function) thì sẽ có F
 <p>Khi một biến được sử dụng trong JavaScript, thì JavaScript sẽ cố gắng tìm giá trị của biến trong phạm vị hiện tại.</p>
 <p>Nếu nó không thể tìm thấy biến, nó sẽ xem xét ở phạm vi bên ngoài và sẽ tiếp tục làm như vậy cho đến khi nó tìm thấy biến hoặc đến phạm vi toàn cục.</p>
 <p><img src="https://hungcuong97.github.io/images/scope-chain.png" alt=""></p>
+<h2 id="span-stylefont-size-24ptstrongclosure-là-gìstrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Closure là gì?<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<p>Một <strong>closure</strong> là một <strong>inner function</strong> (hàm khai báo bên trong một hàm khác), nó có thể truy cập tới các biến của <strong>outer function</strong> (hàm chứa inner function) - <strong>scope chain</strong>.</p>
+<p><strong>Closure</strong> có 3 <strong>scope chain</strong>, nó có thể:</p>
+<ul>
+<li>Truy cập tới cá biến khai báo bên trong nó.</li>
+<li>Truy cập tới các biến của outer function (hàm chứa nó).</li>
+<li>Truy cập tới các biến global.</li>
+</ul>
+<p><img src="https://hungcuong97.github.io/images/closure.png" alt=""></p>
+<p><strong>Closure</strong> không chỉ truy cập được tới các biến, mà còn có thể truy cập các tham số của <strong>outer function</strong>.</p>
+<p><strong>Closure</strong> (inner function) có thể sử dụng các biên của hàm cha mặc dù hàm cha đã chạy xong.</p>
+<p><img src="https://hungcuong97.github.io/images/closure-outer-return.png" alt=""></p>
+<p>Function <strong>Counter</strong> trả về một <strong>closure function</strong> (IncreaseCounter), function <strong>IncreaseCounter</strong> có nhiệm vụ tăng biến <strong>counter</strong> lên 1 đơn vị và trả kết quả về.</p>
+<p>Khi chúng ta gọi <strong>Counter()</strong> (biến <strong>counter</strong> bên trong function <strong>Counter()</strong> đã bị hủy nhưng nó vẫn tồn tại trong <strong>closure function</strong> (IncreaseCounter) ), biến <strong>counter</strong> sẽ tham chiếu đến fucntion <strong>IncreaseCounter()</strong> chứ không phải function <strong>Counter()</strong> . Do đó, khi chúng ta gọi <strong>counter()</strong>, nó vẫn có thể truy cập <strong>counter</strong> được khai báo trong <strong>Counter()</strong>.</p>
+<p><strong>&ndash;&gt; Lưu ý:</strong></p>
+<ul>
+<li>Các biến bên trong hàm sẽ kết thúc khi hàm đó được chạy xong.</li>
+<li></li>
+</ul>
 <h2 id="span-stylefont-size-24ptstrongtài-liệu-tham-khảostrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Tài liệu tham khảo<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
 <p><a href="https://xdevclass.com/hieu-sau-ve-hoisting-scope-trong-javascript/">https://xdevclass.com/hieu-sau-ve-hoisting-scope-trong-javascript/</a></p>
 <p><a href="https://duongdt0291.github.io/2021/01/js-concept-execution-context-hoisting-scope-and-closure-p1/">https://duongdt0291.github.io/2021/01/js-concept-execution-context-hoisting-scope-and-closure-p1/</a></p>
