@@ -8,22 +8,22 @@
 <meta name="generator" content="Hugo 0.83.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Trần Hùng Cường">
 <meta name="keywords" content="">
-<meta name="description" content="Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến (khai báo bằng var) hoặc** hàm** (function declaration) được chuyển lên trên đầu để **compiled** hay **thực thi code.**
-  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined.   Với hàm (function declaration): JavaScript sẽ chuyển phần khai báo hàm lên đầu và gán giá trị là** đường dẫn đến function trong bộ nhớ** (tức giá trị function được lưu luôn ở giai đoạn này, khác với viết chỉ có tên).">
+<meta name="description" content="Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến (khai báo bằng var) hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
+  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined.   Với hàm (function declaration): JavaScript sẽ chuyển phần khai báo hàm lên đầu và gán giá trị là đường dẫn đến function trong bộ nhớ (tức giá trị function được lưu luôn ở giai đoạn này, khác với viết chỉ có tên).">
 
 
-<meta property="og:description" content="Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến (khai báo bằng var) hoặc** hàm** (function declaration) được chuyển lên trên đầu để **compiled** hay **thực thi code.**
-  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined.   Với hàm (function declaration): JavaScript sẽ chuyển phần khai báo hàm lên đầu và gán giá trị là** đường dẫn đến function trong bộ nhớ** (tức giá trị function được lưu luôn ở giai đoạn này, khác với viết chỉ có tên).">
+<meta property="og:description" content="Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến (khai báo bằng var) hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
+  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined.   Với hàm (function declaration): JavaScript sẽ chuyển phần khai báo hàm lên đầu và gán giá trị là đường dẫn đến function trong bộ nhớ (tức giá trị function được lưu luôn ở giai đoạn này, khác với viết chỉ có tên).">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hoisting trong JavaScript">
 <meta name="twitter:title" content="Hoisting trong JavaScript">
 <meta property="og:url" content="https://hungcuong97.github.io/post/hoisting/">
 <meta property="twitter:url" content="https://hungcuong97.github.io/post/hoisting/">
 <meta property="og:site_name" content="Cuongth Blog">
-<meta property="og:description" content="Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến (khai báo bằng var) hoặc** hàm** (function declaration) được chuyển lên trên đầu để **compiled** hay **thực thi code.**
-  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined.   Với hàm (function declaration): JavaScript sẽ chuyển phần khai báo hàm lên đầu và gán giá trị là** đường dẫn đến function trong bộ nhớ** (tức giá trị function được lưu luôn ở giai đoạn này, khác với viết chỉ có tên).">
-<meta name="twitter:description" content="Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến (khai báo bằng var) hoặc** hàm** (function declaration) được chuyển lên trên đầu để **compiled** hay **thực thi code.**
-  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined.   Với hàm (function declaration): JavaScript sẽ chuyển phần khai báo hàm lên đầu và gán giá trị là** đường dẫn đến function trong bộ nhớ** (tức giá trị function được lưu luôn ở giai đoạn này, khác với viết chỉ có tên).">
+<meta property="og:description" content="Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến (khai báo bằng var) hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
+  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined.   Với hàm (function declaration): JavaScript sẽ chuyển phần khai báo hàm lên đầu và gán giá trị là đường dẫn đến function trong bộ nhớ (tức giá trị function được lưu luôn ở giai đoạn này, khác với viết chỉ có tên).">
+<meta name="twitter:description" content="Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến (khai báo bằng var) hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
+  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined.   Với hàm (function declaration): JavaScript sẽ chuyển phần khai báo hàm lên đầu và gán giá trị là đường dẫn đến function trong bộ nhớ (tức giá trị function được lưu luôn ở giai đoạn này, khác với viết chỉ có tên).">
 <meta property="og:locale" content="vi">
 
   
@@ -193,14 +193,14 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p><strong>Hoisting</strong> là một hành vi mặc định của javaScript, cho phép các <strong>khai báo biến</strong> (khai báo bằng <strong>var</strong>) hoặc** hàm** (function declaration) được chuyển lên trên đầu để **compiled** hay **thực thi code.**</p>
+              <p><strong>Hoisting</strong> là một hành vi mặc định của javaScript, cho phép các <strong>khai báo biến</strong> (khai báo bằng <strong>var</strong>) hoặc <strong>hàm</strong> (function declaration) được chuyển lên trên đầu để <strong>compiled</strong> hay <strong>thực thi code.</strong></p>
 <ul>
 <li>
 <p><strong>Với biến</strong> (khai báo bằng <strong>var</strong>): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị <strong>undefined</strong>.
-<!-- raw HTML omitted --></p>
+<img src="https://hungcuong97.github.io/images/hoisting1.png" alt=""></p>
 </li>
 <li>
-<p><strong>Với hàm</strong> (function declaration): JavaScript sẽ chuyển phần khai báo hàm lên đầu và gán giá trị là** đường dẫn đến function trong bộ nhớ** (tức giá trị function được lưu luôn ở giai đoạn này, khác với viết chỉ có tên).</p>
+<p><strong>Với hàm</strong> (function declaration): JavaScript sẽ chuyển phần khai báo hàm lên đầu và gán giá trị là <strong>đường dẫn đến function trong bộ nhớ</strong> (tức giá trị function được lưu luôn ở giai đoạn này, khác với viết chỉ có tên).</p>
 </li>
 </ul>
 <!-- raw HTML omitted -->
