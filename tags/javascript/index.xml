@@ -32,5 +32,14 @@ Biến được khai báo cục bộ (bên trong một function) thì sẽ có F
   Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined. Trong function sayHi(), chúng ta khai báo biến name với từ khóa var =&amp;gt; hoisting đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho name là undefined.</description>
     </item>
     
+    <item>
+      <title>JavaScript: This</title>
+      <link>https://hungcuong97.github.io/post/js-this/</link>
+      <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hungcuong97.github.io/post/js-this/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

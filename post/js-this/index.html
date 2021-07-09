@@ -8,22 +8,18 @@
 <meta name="generator" content="Hugo 0.83.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Trần Hùng Cường">
 <meta name="keywords" content="">
-<meta name="description" content="Hoisting là gì? Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
-  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined. Trong function sayHi(), chúng ta khai báo biến name với từ khóa var =&gt; hoisting đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho name là undefined.">
+<meta name="description" content="">
 
 
-<meta property="og:description" content="Hoisting là gì? Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
-  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined. Trong function sayHi(), chúng ta khai báo biến name với từ khóa var =&gt; hoisting đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho name là undefined.">
+<meta property="og:description" content="">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript: Hoisting">
-<meta name="twitter:title" content="JavaScript: Hoisting">
-<meta property="og:url" content="https://hungcuong97.github.io/post/js-hoisting/">
-<meta property="twitter:url" content="https://hungcuong97.github.io/post/js-hoisting/">
+<meta property="og:title" content="JavaScript: This">
+<meta name="twitter:title" content="JavaScript: This">
+<meta property="og:url" content="https://hungcuong97.github.io/post/js-this/">
+<meta property="twitter:url" content="https://hungcuong97.github.io/post/js-this/">
 <meta property="og:site_name" content="Cuongth Blog">
-<meta property="og:description" content="Hoisting là gì? Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
-  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined. Trong function sayHi(), chúng ta khai báo biến name với từ khóa var =&gt; hoisting đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho name là undefined.">
-<meta name="twitter:description" content="Hoisting là gì? Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
-  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined. Trong function sayHi(), chúng ta khai báo biến name với từ khóa var =&gt; hoisting đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho name là undefined.">
+<meta property="og:description" content="">
+<meta name="twitter:description" content="">
 <meta property="og:locale" content="vi">
 
   
@@ -57,14 +53,14 @@
   <meta property="twitter:image" content="https://hungcuong97.github.io/images/avatar.jpg">
 
 
-    <title>JavaScript: Hoisting</title>
+    <title>JavaScript: This</title>
 
     <link rel="icon" href="https://hungcuong97.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://hungcuong97.github.io/post/js-hoisting/">
+    <link rel="canonical" href="https://hungcuong97.github.io/post/js-this/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -174,7 +170,7 @@
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      JavaScript: Hoisting
+      JavaScript: This
     </h1>
   
   
@@ -193,52 +189,7 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h2 id="span-stylefont-size-24ptstronghoisting-là-gìstrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Hoisting là gì?<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
-<p><strong>Hoisting</strong> là một hành vi mặc định của javaScript, cho phép các <strong>khai báo biến</strong> hoặc <strong>hàm</strong> (function declaration) được chuyển lên trên đầu để <strong>compiled</strong> hay <strong>thực thi code.</strong></p>
-<ul>
-<li>
-<p><strong>Với biến</strong> (khai báo bằng <strong>var</strong>): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị <strong>undefined</strong>.
-<img src="https://hungcuong97.github.io/images/hoisting-variable.png" alt=""></p>
-<p>Trong function <strong>sayHi()</strong>, chúng ta khai báo biến <strong>name</strong> với từ khóa <strong>var</strong> =&gt; <strong>hoisting</strong> đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho <strong>name</strong> là <strong>undefined</strong>.</p>
-<p>Khi chúng ta console.log biến <strong>name</strong> thì chúng ta chưa định nghĩa biến <strong>name</strong> nào (gán giá trị cho biến <strong>name</strong>) nên biến <strong>name</strong> có giá trị là <strong>undefined</strong>.</p>
-<p>Các biến được khai vái với <strong>từ khóa let</strong> (và const) cũng được hoisting, nhưng không giống với từ khóa <strong>var</strong>, chúng không thể truy cập trước khi chúng thực sự được khởi tạo. Do dó JavaScript trả về lỗi <strong>ReferenceError</strong>.</p>
-</li>
-<li>
-<p><strong>Với hàm</strong> (function declaration): JavaScript sẽ chuyển phần khai báo hàm lên đầu và gán giá trị là <strong>đường dẫn đến function trong bộ nhớ</strong> (tức giá trị function được lưu luôn ở giai đoạn này, khác với viết chỉ có tên).
-<img src="https://hungcuong97.github.io/images/hoisting-function.png" alt=""></p>
-</li>
-</ul>
-<!-- raw HTML omitted -->
-<p><strong>&ndash;&gt; Lưu ý:</strong>
-Cơ chế hoisting không áp dụng cho cho <strong>biểu thức hàm</strong> (function expression).</p>
-<p>Vì <strong>biểu thức hàm</strong> (function expression) bản chất là hàm được gán cho một biến. Do đó, nó cũng giống như vừa khai báo và vừa khởi tạo biến.
-<img src="https://hungcuong97.github.io/images/hoisting-function2.png" alt=""></p>
-<h2 id="span-stylefont-size-24ptstrongthứ-tự-hoistingstrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Thứ tự Hoisting<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
-<p>Đây là điều quan trọng khi khai báo các hàm và biến trong JavaSctipt. Thứ tự hoisting được sắp xếp giảm dần theo thứ tự:</p>
-<ol>
-<li>Khai báo biến</li>
-<li>Khai báo hàm</li>
-<li>Gán biến</li>
-</ol>
-<ul>
-<li>
-<p><strong>Gán biến</strong> hoisting dưới (có thứ tự ưu tiên hơn) <strong>khai báo hàm</strong>:
-<img src="https://hungcuong97.github.io/images/hoisting-function3.png" alt=""></p>
-<p>Cơ chế <strong>hoisting</strong> sẽ chuyển khai báo biến <strong>message</strong> và khai báo hàm <strong>message</strong> lên đầu, ngày sau đó là phép gán biến <strong>message</strong>.
-Vì thế biến <strong>message</strong> sẽ đè lên hàm <strong>message</strong> =&gt; <strong>type</strong> của <strong>message</strong> là <strong>string</strong></p>
-</li>
-<li>
-<p><strong>Khai báo hàm</strong> hoisting dưới (có thứ tự ưu tiên hơn) <strong>khai báo biến</strong>:
-<img src="https://hungcuong97.github.io/images/hoisting-function4.png" alt=""></p>
-<p>Khai báo hàm sẽ được <strong>hoisting</strong> dưới khai báo biến nên <strong>type</strong> của <strong>message</strong> sẽ là <strong>function</strong></p>
-</li>
-</ul>
-<h2 id="span-stylefont-size-24ptstrongtài-liệu-tham-khảostrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Tài liệu tham khảo<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
-<p><a href="https://anonystick.com/blog-developer/hoisting-javascript-la-gi-hoisting-tot-hay-xau-chi-can-1-phut-de-hieu-2020051681168206">https://anonystick.com/blog-developer/hoisting-javascript-la-gi-hoisting-tot-hay-xau-chi-can-1-phut-de-hieu-2020051681168206</a></p>
-<p><a href="https://viblo.asia/p/hoisting-javascript-WAyK8RmmlxX">https://viblo.asia/p/hoisting-javascript-WAyK8RmmlxX</a></p>
-<p><a href="https://niithanoi.edu.vn/hoisting-trong-javascript.html">https://niithanoi.edu.vn/hoisting-trong-javascript.html</a></p>
-<!-- raw HTML omitted -->
-
+              
               
             </div>
           </div>
@@ -263,7 +214,7 @@ Vì thế biến <strong>message</strong> sẽ đè lên hàm <strong>message</s
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://hungcuong97.github.io/post/js-scope-closures/" data-tooltip="JavaScript: Scope và Closure">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hungcuong97.github.io/post/js-hoisting/" data-tooltip="JavaScript: Hoisting">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">Tiếp</span>
@@ -271,7 +222,7 @@ Vì thế biến <strong>message</strong> sẽ đè lên hàm <strong>message</s
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://hungcuong97.github.io/post/js-this/" data-tooltip="JavaScript: This">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">Trước</span>
                   <i class="fa fa-angle-right"></i>
@@ -289,19 +240,19 @@ Vì thế biến <strong>message</strong> sẽ đè lên hàm <strong>message</s
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hungcuong97.github.io/post/js-hoisting/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hungcuong97.github.io/post/js-this/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hungcuong97.github.io/post/js-hoisting/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hungcuong97.github.io/post/js-this/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hungcuong97.github.io/post/js-hoisting/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hungcuong97.github.io/post/js-this/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -349,7 +300,7 @@ Vì thế biến <strong>message</strong> sẽ đè lên hàm <strong>message</s
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://hungcuong97.github.io/post/js-scope-closures/" data-tooltip="JavaScript: Scope và Closure">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hungcuong97.github.io/post/js-hoisting/" data-tooltip="JavaScript: Hoisting">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">Tiếp</span>
@@ -357,7 +308,7 @@ Vì thế biến <strong>message</strong> sẽ đè lên hàm <strong>message</s
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://hungcuong97.github.io/post/js-this/" data-tooltip="JavaScript: This">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">Trước</span>
                   <i class="fa fa-angle-right"></i>
@@ -375,19 +326,19 @@ Vì thế biến <strong>message</strong> sẽ đè lên hàm <strong>message</s
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hungcuong97.github.io/post/js-hoisting/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hungcuong97.github.io/post/js-this/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hungcuong97.github.io/post/js-hoisting/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hungcuong97.github.io/post/js-this/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hungcuong97.github.io/post/js-hoisting/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hungcuong97.github.io/post/js-this/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -417,19 +368,19 @@ Vì thế biến <strong>message</strong> sẽ đè lên hàm <strong>message</s
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhungcuong97.github.io%2Fpost%2Fjs-hoisting%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhungcuong97.github.io%2Fpost%2Fjs-this%2F">
           <i class="fa fa-facebook-official"></i><span>Chia sẻ với Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhungcuong97.github.io%2Fpost%2Fjs-hoisting%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhungcuong97.github.io%2Fpost%2Fjs-this%2F">
           <i class="fa fa-twitter"></i><span>Chia sẻ với Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhungcuong97.github.io%2Fpost%2Fjs-hoisting%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhungcuong97.github.io%2Fpost%2Fjs-this%2F">
           <i class="fa fa-google-plus"></i><span>Chia sẻ với Google&#43;</span>
         </a>
       </li>
@@ -521,9 +472,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/hungcuong97.github.io\/post\/js-hoisting\/';
+          this.page.url = 'https:\/\/hungcuong97.github.io\/post\/js-this\/';
           
-            this.page.identifier = '\/post\/js-hoisting\/'
+            this.page.identifier = '\/post\/js-this\/'
           
         };
         (function() {
