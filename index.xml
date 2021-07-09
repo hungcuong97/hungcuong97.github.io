@@ -8,11 +8,11 @@
     <language>vi</language>
     <lastBuildDate>Sat, 20 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hungcuong97.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Scope và Closure trong JavaScript</title>
-      <link>https://hungcuong97.github.io/post/scope-closures/</link>
+      <title>JavaScript: Scope và Closure</title>
+      <link>https://hungcuong97.github.io/post/js-scope-closures/</link>
       <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hungcuong97.github.io/post/scope-closures/</guid>
+      <guid>https://hungcuong97.github.io/post/js-scope-closures/</guid>
       <description>Scope là gì? Scope là phạm vi truy cập của một biến hoặc hàm từ một vị trí xác định trong code.
 Hiện nay, JavaScript có 3 loại scope:
   Global Scope:
@@ -23,11 +23,11 @@ Biến được khai báo cục bộ (bên trong một function) thì sẽ có F
     </item>
     
     <item>
-      <title>Hoisting trong JavaScript</title>
-      <link>https://hungcuong97.github.io/post/hoisting/</link>
+      <title>JavaScript: Hoisting</title>
+      <link>https://hungcuong97.github.io/post/js-hoisting/</link>
       <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hungcuong97.github.io/post/hoisting/</guid>
+      <guid>https://hungcuong97.github.io/post/js-hoisting/</guid>
       <description>Hoisting là gì? Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
   Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined. Trong function sayHi(), chúng ta khai báo biến name với từ khóa var =&amp;gt; hoisting đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho name là undefined.</description>
     </item>

@@ -8,49 +8,29 @@
 <meta name="generator" content="Hugo 0.83.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Trần Hùng Cường">
 <meta name="keywords" content="">
-<meta name="description" content="Scope là gì? Scope là phạm vi truy cập của một biến hoặc hàm từ một vị trí xác định trong code.
-Hiện nay, JavaScript có 3 loại scope:
-  Global Scope:
-Biến được khai báo global (bên ngoài bất cứ function nào) thì sẽ có Global Scope.
-Biến global có thể được truy cập từ bất cứ đâu trong chương trình Javascript.
-  Function Scope:
-Biến được khai báo cục bộ (bên trong một function) thì sẽ có Function Scope.">
+<meta name="description" content="Hoisting là gì? Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
+  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined. Trong function sayHi(), chúng ta khai báo biến name với từ khóa var =&gt; hoisting đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho name là undefined.">
 
 
-<meta property="og:description" content="Scope là gì? Scope là phạm vi truy cập của một biến hoặc hàm từ một vị trí xác định trong code.
-Hiện nay, JavaScript có 3 loại scope:
-  Global Scope:
-Biến được khai báo global (bên ngoài bất cứ function nào) thì sẽ có Global Scope.
-Biến global có thể được truy cập từ bất cứ đâu trong chương trình Javascript.
-  Function Scope:
-Biến được khai báo cục bộ (bên trong một function) thì sẽ có Function Scope.">
+<meta property="og:description" content="Hoisting là gì? Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
+  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined. Trong function sayHi(), chúng ta khai báo biến name với từ khóa var =&gt; hoisting đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho name là undefined.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Scope và Closure trong JavaScript">
-<meta name="twitter:title" content="Scope và Closure trong JavaScript">
-<meta property="og:url" content="https://hungcuong97.github.io/post/scope-closures/">
-<meta property="twitter:url" content="https://hungcuong97.github.io/post/scope-closures/">
+<meta property="og:title" content="JavaScript: Hoisting">
+<meta name="twitter:title" content="JavaScript: Hoisting">
+<meta property="og:url" content="https://hungcuong97.github.io/post/js-hoisting/">
+<meta property="twitter:url" content="https://hungcuong97.github.io/post/js-hoisting/">
 <meta property="og:site_name" content="Cuongth Blog">
-<meta property="og:description" content="Scope là gì? Scope là phạm vi truy cập của một biến hoặc hàm từ một vị trí xác định trong code.
-Hiện nay, JavaScript có 3 loại scope:
-  Global Scope:
-Biến được khai báo global (bên ngoài bất cứ function nào) thì sẽ có Global Scope.
-Biến global có thể được truy cập từ bất cứ đâu trong chương trình Javascript.
-  Function Scope:
-Biến được khai báo cục bộ (bên trong một function) thì sẽ có Function Scope.">
-<meta name="twitter:description" content="Scope là gì? Scope là phạm vi truy cập của một biến hoặc hàm từ một vị trí xác định trong code.
-Hiện nay, JavaScript có 3 loại scope:
-  Global Scope:
-Biến được khai báo global (bên ngoài bất cứ function nào) thì sẽ có Global Scope.
-Biến global có thể được truy cập từ bất cứ đâu trong chương trình Javascript.
-  Function Scope:
-Biến được khai báo cục bộ (bên trong một function) thì sẽ có Function Scope.">
+<meta property="og:description" content="Hoisting là gì? Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
+  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined. Trong function sayHi(), chúng ta khai báo biến name với từ khóa var =&gt; hoisting đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho name là undefined.">
+<meta name="twitter:description" content="Hoisting là gì? Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
+  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined. Trong function sayHi(), chúng ta khai báo biến name với từ khóa var =&gt; hoisting đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho name là undefined.">
 <meta property="og:locale" content="vi">
 
   
-    <meta property="article:published_time" content="2021-02-20T00:00:00">
+    <meta property="article:published_time" content="2021-02-12T00:00:00">
   
   
-    <meta property="article:modified_time" content="2021-02-20T00:00:00">
+    <meta property="article:modified_time" content="2021-02-12T00:00:00">
   
   
   
@@ -77,14 +57,14 @@ Biến được khai báo cục bộ (bên trong một function) thì sẽ có F
   <meta property="twitter:image" content="https://hungcuong97.github.io/images/avatar.jpg">
 
 
-    <title>Scope và Closure trong JavaScript</title>
+    <title>JavaScript: Hoisting</title>
 
     <link rel="icon" href="https://hungcuong97.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://hungcuong97.github.io/post/scope-closures/">
+    <link rel="canonical" href="https://hungcuong97.github.io/post/js-hoisting/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -194,15 +174,15 @@ Biến được khai báo cục bộ (bên trong một function) thì sẽ có F
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      Scope và Closure trong JavaScript
+      JavaScript: Hoisting
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2021-02-20T00:00:00Z">
+      <time itemprop="datePublished" datetime="2021-02-12T00:00:00Z">
         
-  tháng 2 20, 2021
+  tháng 2 12, 2021
 
       </time>
     
@@ -213,63 +193,51 @@ Biến được khai báo cục bộ (bên trong một function) thì sẽ có F
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <h2 id="span-stylefont-size-24ptstrongscope-là-gìstrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Scope là gì?<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
-<p><strong>Scope</strong> là phạm vi truy cập của một <strong>biến</strong> hoặc <strong>hàm</strong> từ một vị trí xác định trong code.</p>
-<p>Hiện nay, JavaScript có 3 loại scope:</p>
+              <h2 id="span-stylefont-size-24ptstronghoisting-là-gìstrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Hoisting là gì?<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<p><strong>Hoisting</strong> là một hành vi mặc định của javaScript, cho phép các <strong>khai báo biến</strong> hoặc <strong>hàm</strong> (function declaration) được chuyển lên trên đầu để <strong>compiled</strong> hay <strong>thực thi code.</strong></p>
 <ul>
 <li>
-<p><strong>Global Scope</strong>:</p>
-<p>Biến được khai báo <strong>global</strong> (bên ngoài bất cứ function nào) thì sẽ có <strong>Global Scope</strong>.</p>
-<p><img src="https://hungcuong97.github.io/images/scope-global.png" alt=""></p>
-<p>Biến <strong>global</strong> có thể được truy cập từ bất cứ đâu trong chương trình Javascript.</p>
+<p><strong>Với biến</strong> (khai báo bằng <strong>var</strong>): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị <strong>undefined</strong>.
+<img src="https://hungcuong97.github.io/images/hoisting-variable.png" alt=""></p>
+<p>Trong function <strong>sayHi()</strong>, chúng ta khai báo biến <strong>name</strong> với từ khóa <strong>var</strong> =&gt; <strong>hoisting</strong> đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho <strong>name</strong> là <strong>undefined</strong>.</p>
+<p>Khi chúng ta console.log biến <strong>name</strong> thì chúng ta chưa định nghĩa biến <strong>name</strong> nào (gán giá trị cho biến <strong>name</strong>) nên biến <strong>name</strong> có giá trị là <strong>undefined</strong>.</p>
+<p>Các biến được khai vái với <strong>từ khóa let</strong> (và const) cũng được hoisting, nhưng không giống với từ khóa <strong>var</strong>, chúng không thể truy cập trước khi chúng thực sự được khởi tạo. Do dó JavaScript trả về lỗi <strong>ReferenceError</strong>.</p>
 </li>
 <li>
-<p><strong>Function Scope</strong>:</p>
-<p>Biến được khai báo cục bộ (bên trong một function) thì sẽ có <strong>Function Scope</strong>.</p>
-<p><img src="https://hungcuong97.github.io/images/scope-function.png" alt=""></p>
+<p><strong>Với hàm</strong> (function declaration): JavaScript sẽ chuyển phần khai báo hàm lên đầu và gán giá trị là <strong>đường dẫn đến function trong bộ nhớ</strong> (tức giá trị function được lưu luôn ở giai đoạn này, khác với viết chỉ có tên).
+<img src="https://hungcuong97.github.io/images/hoisting-function.png" alt=""></p>
+</li>
+</ul>
+<!-- raw HTML omitted -->
+<p><strong>&ndash;&gt; Lưu ý:</strong>
+Cơ chế hoisting không áp dụng cho cho <strong>biểu thức hàm</strong> (function expression).</p>
+<p>Vì <strong>biểu thức hàm</strong> (function expression) bản chất là hàm được gán cho một biến. Do đó, nó cũng giống như vừa khai báo và vừa khởi tạo biến.
+<img src="https://hungcuong97.github.io/images/hoisting-function2.png" alt=""></p>
+<h2 id="span-stylefont-size-24ptstrongthứ-tự-hoistingstrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Thứ tự Hoisting<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<p>Đây là điều quan trọng khi khai báo các hàm và biến trong JavaSctipt. Thứ tự hoisting được sắp xếp giảm dần theo thứ tự:</p>
+<ol>
+<li>Khai báo biến</li>
+<li>Khai báo hàm</li>
+<li>Gán biến</li>
+</ol>
+<ul>
+<li>
+<p><strong>Gán biến</strong> hoisting dưới (có thứ tự ưu tiên hơn) <strong>khai báo hàm</strong>:
+<img src="https://hungcuong97.github.io/images/hoisting-function3.png" alt=""></p>
+<p>Cơ chế <strong>hoisting</strong> sẽ chuyển khai báo biến <strong>message</strong> và khai báo hàm <strong>message</strong> lên đầu, ngày sau đó là phép gán biến <strong>message</strong>.
+Vì thế biến <strong>message</strong> sẽ đè lên hàm <strong>message</strong> =&gt; <strong>type</strong> của <strong>message</strong> là <strong>string</strong></p>
 </li>
 <li>
-<p><strong>Block Scope</strong>:</p>
-<p>Trước ES2015(ES6) JavaScript không có <strong>Block Scope</strong></p>
-<p>Từ ES6 trở đi,các biến được khai báo bằng <strong>let</strong> hoặc <strong>const</strong> có <strong>Block Scope</strong>. Vì thế các biến bên trong block <strong>{}</strong> không thể được truy cập từ bên ngoài block.</p>
-<p><img src="https://hungcuong97.github.io/images/scope-block.png" alt=""></p>
-<p>Biến được khai báo với <strong>var</strong> không có <strong>Block Scope</strong> nên có thể được truy cập từ bên ngoài block.
-<img src="https://hungcuong97.github.io/images/scope-block-var.png" alt=""></p>
+<p><strong>Khai báo hàm</strong> hoisting dưới (có thứ tự ưu tiên hơn) <strong>khai báo biến</strong>:
+<img src="https://hungcuong97.github.io/images/hoisting-function4.png" alt=""></p>
+<p>Khai báo hàm sẽ được <strong>hoisting</strong> dưới khai báo biến nên <strong>type</strong> của <strong>message</strong> sẽ là <strong>function</strong></p>
 </li>
-</ul>
-<h2 id="span-stylefont-size-24ptstrongscope-chainstrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Scope Chain<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
-<p>Khi một biến được sử dụng trong JavaScript, thì JavaScript sẽ cố gắng tìm giá trị của biến trong phạm vị hiện tại.</p>
-<p>Nếu nó không thể tìm thấy biến, nó sẽ xem xét ở phạm vi bên ngoài và sẽ tiếp tục làm như vậy cho đến khi nó tìm thấy biến hoặc đến phạm vi toàn cục.</p>
-<p><img src="https://hungcuong97.github.io/images/scope-chain.png" alt=""></p>
-<h2 id="span-stylefont-size-24ptstrongclosure-là-gìstrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Closure là gì?<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
-<p>Một <strong>closure</strong> là một <strong>inner function</strong> (hàm khai báo bên trong một hàm khác), nó có thể truy cập tới các biến của <strong>outer function</strong> (hàm chứa inner function) - <strong>scope chain</strong>.</p>
-<p><strong>Closure</strong> có 3 <strong>scope chain</strong>, nó có thể:</p>
-<ul>
-<li>Truy cập tới cá biến khai báo bên trong nó.</li>
-<li>Truy cập tới các biến của outer function (hàm chứa nó).</li>
-<li>Truy cập tới các biến global.</li>
-</ul>
-<p><img src="https://hungcuong97.github.io/images/closure.png" alt=""></p>
-<p><strong>Closure</strong> không chỉ truy cập được tới các biến, mà còn có thể truy cập các tham số của <strong>outer function</strong>.</p>
-<p><strong>&ndash;&gt; Lưu ý:</strong></p>
-<ul>
-<li><strong>Closure</strong> không thể truy cập <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/arguments">đối tượng arguments</a> của <strong>outer function</strong>.</li>
-</ul>
-<p><strong>Closure</strong> (inner function) có thể sử dụng các biến của hàm cha mặc dù hàm cha đã chạy xong.</p>
-<p><img src="https://hungcuong97.github.io/images/closure-outer-return.png" alt=""></p>
-<p>Function <strong>Counter</strong> trả về một <strong>closure function</strong> (IncreaseCounter), function <strong>IncreaseCounter</strong> có nhiệm vụ tăng biến <strong>counter</strong> lên 1 đơn vị và trả kết quả về.</p>
-<p>Khi chúng ta gọi <strong>Counter()</strong> xong (biến <strong>counter</strong> bên trong function <strong>Counter()</strong> đã bị hủy nhưng nó vẫn tồn tại trong <strong>closure function</strong> (IncreaseCounter) ), biến <strong>counter</strong> sẽ tham chiếu đến fucntion <strong>IncreaseCounter()</strong> chứ không phải function <strong>Counter()</strong> . Do đó, khi chúng ta gọi <strong>counter()</strong>, nó vẫn có thể truy cập <strong>counter</strong> được khai báo trong <strong>Counter()</strong>.</p>
-<p><strong>&ndash;&gt; Lưu ý:</strong></p>
-<ul>
-<li>Các biến bên trong hàm sẽ kết thúc khi hàm đó được chạy xong.</li>
-<li><strong>This</strong> trong <strong>closure</strong> function là <strong>window</strong> (<strong>undefind</strong> nếu chạy chế độ strict mode)</li>
-<li>Nếu muốn <strong>return nhiều hàm closure</strong> thì phải sử dụng một object, trong đó mỗi phần tử sẽ là một closure function.</li>
-<li><strong>Closure</strong> có thể thay đổi giá trị của các biến toàn cục lẫn cục bộ.</li>
 </ul>
 <h2 id="span-stylefont-size-24ptstrongtài-liệu-tham-khảostrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Tài liệu tham khảo<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
-<p><a href="https://xdevclass.com/hieu-sau-ve-hoisting-scope-trong-javascript/">https://xdevclass.com/hieu-sau-ve-hoisting-scope-trong-javascript/</a></p>
-<p><a href="https://duongdt0291.github.io/2021/01/js-concept-execution-context-hoisting-scope-and-closure-p1/">https://duongdt0291.github.io/2021/01/js-concept-execution-context-hoisting-scope-and-closure-p1/</a></p>
-<p><a href="https://techmaster.vn/posts/34337/tim-hieu-ve-javascript-closures">https://techmaster.vn/posts/34337/tim-hieu-ve-javascript-closures</a></p>
+<p><a href="https://anonystick.com/blog-developer/hoisting-javascript-la-gi-hoisting-tot-hay-xau-chi-can-1-phut-de-hieu-2020051681168206">https://anonystick.com/blog-developer/hoisting-javascript-la-gi-hoisting-tot-hay-xau-chi-can-1-phut-de-hieu-2020051681168206</a></p>
+<p><a href="https://viblo.asia/p/hoisting-javascript-WAyK8RmmlxX">https://viblo.asia/p/hoisting-javascript-WAyK8RmmlxX</a></p>
+<p><a href="https://niithanoi.edu.vn/hoisting-trong-javascript.html">https://niithanoi.edu.vn/hoisting-trong-javascript.html</a></p>
+<!-- raw HTML omitted -->
 
               
             </div>
@@ -295,7 +263,7 @@ Biến được khai báo cục bộ (bên trong một function) thì sẽ có F
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hungcuong97.github.io/post/js-scope-closures/" data-tooltip="JavaScript: Scope và Closure">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">Tiếp</span>
@@ -303,7 +271,7 @@ Biến được khai báo cục bộ (bên trong một function) thì sẽ có F
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://hungcuong97.github.io/post/hoisting/" data-tooltip="Hoisting trong JavaScript">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">Trước</span>
                   <i class="fa fa-angle-right"></i>
@@ -321,19 +289,19 @@ Biến được khai báo cục bộ (bên trong một function) thì sẽ có F
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hungcuong97.github.io/post/scope-closures/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hungcuong97.github.io/post/js-hoisting/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hungcuong97.github.io/post/scope-closures/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hungcuong97.github.io/post/js-hoisting/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hungcuong97.github.io/post/scope-closures/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hungcuong97.github.io/post/js-hoisting/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -381,7 +349,7 @@ Biến được khai báo cục bộ (bên trong một function) thì sẽ có F
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hungcuong97.github.io/post/js-scope-closures/" data-tooltip="JavaScript: Scope và Closure">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">Tiếp</span>
@@ -389,7 +357,7 @@ Biến được khai báo cục bộ (bên trong một function) thì sẽ có F
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://hungcuong97.github.io/post/hoisting/" data-tooltip="Hoisting trong JavaScript">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">Trước</span>
                   <i class="fa fa-angle-right"></i>
@@ -407,19 +375,19 @@ Biến được khai báo cục bộ (bên trong một function) thì sẽ có F
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hungcuong97.github.io/post/scope-closures/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hungcuong97.github.io/post/js-hoisting/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hungcuong97.github.io/post/scope-closures/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hungcuong97.github.io/post/js-hoisting/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hungcuong97.github.io/post/scope-closures/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hungcuong97.github.io/post/js-hoisting/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -449,19 +417,19 @@ Biến được khai báo cục bộ (bên trong một function) thì sẽ có F
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhungcuong97.github.io%2Fpost%2Fscope-closures%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhungcuong97.github.io%2Fpost%2Fjs-hoisting%2F">
           <i class="fa fa-facebook-official"></i><span>Chia sẻ với Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhungcuong97.github.io%2Fpost%2Fscope-closures%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhungcuong97.github.io%2Fpost%2Fjs-hoisting%2F">
           <i class="fa fa-twitter"></i><span>Chia sẻ với Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhungcuong97.github.io%2Fpost%2Fscope-closures%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhungcuong97.github.io%2Fpost%2Fjs-hoisting%2F">
           <i class="fa fa-google-plus"></i><span>Chia sẻ với Google&#43;</span>
         </a>
       </li>
@@ -553,9 +521,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/hungcuong97.github.io\/post\/scope-closures\/';
+          this.page.url = 'https:\/\/hungcuong97.github.io\/post\/js-hoisting\/';
           
-            this.page.identifier = '\/post\/scope-closures\/'
+            this.page.identifier = '\/post\/js-hoisting\/'
           
         };
         (function() {
