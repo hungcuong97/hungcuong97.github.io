@@ -8,11 +8,11 @@
 <meta name="generator" content="Hugo 0.83.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Trần Hùng Cường">
 <meta name="keywords" content="">
-<meta name="description" content="Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến (khai báo bằng var) hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
+<meta name="description" content="Hoisting là gì? Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
   Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined. Trong function sayHi(), chúng ta khai báo biến name với từ khóa var =&gt; hoisting đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho name là undefined.">
 
 
-<meta property="og:description" content="Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến (khai báo bằng var) hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
+<meta property="og:description" content="Hoisting là gì? Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
   Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined. Trong function sayHi(), chúng ta khai báo biến name với từ khóa var =&gt; hoisting đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho name là undefined.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hoisting trong JavaScript">
@@ -20,9 +20,9 @@
 <meta property="og:url" content="https://hungcuong97.github.io/post/hoisting/">
 <meta property="twitter:url" content="https://hungcuong97.github.io/post/hoisting/">
 <meta property="og:site_name" content="Cuongth Blog">
-<meta property="og:description" content="Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến (khai báo bằng var) hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
+<meta property="og:description" content="Hoisting là gì? Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
   Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined. Trong function sayHi(), chúng ta khai báo biến name với từ khóa var =&gt; hoisting đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho name là undefined.">
-<meta name="twitter:description" content="Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến (khai báo bằng var) hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
+<meta name="twitter:description" content="Hoisting là gì? Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
   Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined. Trong function sayHi(), chúng ta khai báo biến name với từ khóa var =&gt; hoisting đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho name là undefined.">
 <meta property="og:locale" content="vi">
 
@@ -193,7 +193,8 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p><strong>Hoisting</strong> là một hành vi mặc định của javaScript, cho phép các <strong>khai báo biến</strong> (khai báo bằng <strong>var</strong>) hoặc <strong>hàm</strong> (function declaration) được chuyển lên trên đầu để <strong>compiled</strong> hay <strong>thực thi code.</strong></p>
+              <h2 id="span-stylefont-size-24ptstronghoisting-là-gìstrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Hoisting là gì?<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<p><strong>Hoisting</strong> là một hành vi mặc định của javaScript, cho phép các <strong>khai báo biến</strong> hoặc <strong>hàm</strong> (function declaration) được chuyển lên trên đầu để <strong>compiled</strong> hay <strong>thực thi code.</strong></p>
 <ul>
 <li>
 <p><strong>Với biến</strong> (khai báo bằng <strong>var</strong>): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị <strong>undefined</strong>.
@@ -208,9 +209,21 @@
 </li>
 </ul>
 <!-- raw HTML omitted -->
-<p><strong>&ndash;&gt; Lưu ý:</strong> Cơ chế hoisting không áp dụng cho cho biểu thức hàm (function expression).
+<p><strong>&ndash;&gt; Lưu ý:</strong>
+Cơ chế hoisting không áp dụng cho cho <strong>biểu thức hàm</strong> (function expression).</p>
+<p>Vì <strong>biểu thức hàm</strong> (function expression) bản chất là hàm được gán cho một biến. Do đó, nó cũng giống như vừa khai báo và vừa khởi tạo biến.
 <img src="https://hungcuong97.github.io/images/hoisting-function2.png" alt=""></p>
-<p>Vì biểu thức hàm (function expression) bản chất là hàm được gán cho một biến. Do đó, nó cũng giống như vừa khai báo và vừa khởi tạo biến.</p>
+<h2 id="span-stylefont-size-24ptstrongthứ-tự-ưu-tiên-trong-hoistingstrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Thứ tự ưu tiên trong Hoisting<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<ul>
+<li>
+<p><strong>Gán biến</strong> có thứ tự ưu tiên hơn <strong>khai báo hàm</strong>:
+<img src="https://hungcuong97.github.io/images/hoisting-function3.png" alt=""></p>
+</li>
+<li>
+<p><strong>Khai báo hàm</strong> có thứ tự ưu tiên hơn <strong>khai báo biến</strong>:
+<img src="https://hungcuong97.github.io/images/hoisting-function4.png" alt=""></p>
+</li>
+</ul>
 <h2 id="span-stylefont-size-24ptstrongtài-liệu-tham-khảostrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Tài liệu tham khảo<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
 <p><a href="https://anonystick.com/blog-developer/hoisting-javascript-la-gi-hoisting-tot-hay-xau-chi-can-1-phut-de-hieu-2020051681168206">https://anonystick.com/blog-developer/hoisting-javascript-la-gi-hoisting-tot-hay-xau-chi-can-1-phut-de-hieu-2020051681168206</a></p>
 <p><a href="https://viblo.asia/p/hoisting-javascript-WAyK8RmmlxX">https://viblo.asia/p/hoisting-javascript-WAyK8RmmlxX</a></p>

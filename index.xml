@@ -13,7 +13,7 @@
       <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://hungcuong97.github.io/post/hoisting/</guid>
-      <description>Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến (khai báo bằng var) hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
+      <description>Hoisting là gì? Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
   Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined. Trong function sayHi(), chúng ta khai báo biến name với từ khóa var =&amp;gt; hoisting đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho name là undefined.</description>
     </item>
     
