@@ -9,11 +9,11 @@
 <meta name="author" content="Trần Hùng Cường">
 <meta name="keywords" content="">
 <meta name="description" content="Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến (khai báo bằng var) hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
-  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined.   Với hàm (function declaration): JavaScript sẽ chuyển phần khai báo hàm lên đầu và gán giá trị là đường dẫn đến function trong bộ nhớ (tức giá trị function được lưu luôn ở giai đoạn này, khác với viết chỉ có tên).">
+  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined. Trong function sayHi(), chúng ta khai báo biến name với từ khóa var =&gt; hoisting đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho name là undefined.">
 
 
 <meta property="og:description" content="Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến (khai báo bằng var) hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
-  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined.   Với hàm (function declaration): JavaScript sẽ chuyển phần khai báo hàm lên đầu và gán giá trị là đường dẫn đến function trong bộ nhớ (tức giá trị function được lưu luôn ở giai đoạn này, khác với viết chỉ có tên).">
+  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined. Trong function sayHi(), chúng ta khai báo biến name với từ khóa var =&gt; hoisting đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho name là undefined.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hoisting trong JavaScript">
 <meta name="twitter:title" content="Hoisting trong JavaScript">
@@ -21,9 +21,9 @@
 <meta property="twitter:url" content="https://hungcuong97.github.io/post/hoisting/">
 <meta property="og:site_name" content="Cuongth Blog">
 <meta property="og:description" content="Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến (khai báo bằng var) hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
-  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined.   Với hàm (function declaration): JavaScript sẽ chuyển phần khai báo hàm lên đầu và gán giá trị là đường dẫn đến function trong bộ nhớ (tức giá trị function được lưu luôn ở giai đoạn này, khác với viết chỉ có tên).">
+  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined. Trong function sayHi(), chúng ta khai báo biến name với từ khóa var =&gt; hoisting đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho name là undefined.">
 <meta name="twitter:description" content="Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến (khai báo bằng var) hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
-  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined.   Với hàm (function declaration): JavaScript sẽ chuyển phần khai báo hàm lên đầu và gán giá trị là đường dẫn đến function trong bộ nhớ (tức giá trị function được lưu luôn ở giai đoạn này, khác với viết chỉ có tên).">
+  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined. Trong function sayHi(), chúng ta khai báo biến name với từ khóa var =&gt; hoisting đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho name là undefined.">
 <meta property="og:locale" content="vi">
 
   
@@ -198,6 +198,9 @@
 <li>
 <p><strong>Với biến</strong> (khai báo bằng <strong>var</strong>): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị <strong>undefined</strong>.
 <img src="https://hungcuong97.github.io/images/hoisting-variable.png" alt=""></p>
+<p>Trong function <strong>sayHi()</strong>, chúng ta khai báo biến <strong>name</strong> với từ khóa <strong>var</strong> =&gt; <strong>hoisting</strong> đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho <strong>name</strong> là <strong>undefined</strong>.</p>
+<p>Khi chúng ta console.log biến <strong>name</strong> thì chúng ta chưa định nghĩa biến <strong>name</strong> nào (gán giá trị cho biến <strong>name</strong>) nên biến <strong>name</strong> có giá trị là <strong>undefined</strong>.</p>
+<p>Các biến được khai vái với <strong>từ khóa let</strong> (và const) cũng được hoisting, nhưng không giống với từ khóa <strong>var</strong>, chúng không thể truy cập trước khi chúng thực sự được khởi tạo. Do dó JavaScript trả về lỗi <strong>ReferenceError</strong>.</p>
 </li>
 <li>
 <p><strong>Với hàm</strong> (function declaration): JavaScript sẽ chuyển phần khai báo hàm lên đầu và gán giá trị là <strong>đường dẫn đến function trong bộ nhớ</strong> (tức giá trị function được lưu luôn ở giai đoạn này, khác với viết chỉ có tên).
@@ -205,10 +208,13 @@
 </li>
 </ul>
 <!-- raw HTML omitted -->
-<p><strong>&ndash;&gt; Lưu ý:</strong> jhsagdjwd</p>
+<p><strong>&ndash;&gt; Lưu ý:</strong> Cơ chế hoisting không áp dụng cho cho biểu thức hàm (function expression).
+<img src="https://hungcuong97.github.io/images/hoisting-function2.png" alt=""></p>
+<p>Vì biểu thức hàm (function expression) bản chất là hàm được gán cho một biến. Do đó, nó cũng giống như vừa khai báo và vừa khởi tạo biến.</p>
 <h2 id="span-stylefont-size-24ptstrongtài-liệu-tham-khảostrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Tài liệu tham khảo<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
 <p><a href="https://anonystick.com/blog-developer/hoisting-javascript-la-gi-hoisting-tot-hay-xau-chi-can-1-phut-de-hieu-2020051681168206">https://anonystick.com/blog-developer/hoisting-javascript-la-gi-hoisting-tot-hay-xau-chi-can-1-phut-de-hieu-2020051681168206</a></p>
 <p><a href="https://viblo.asia/p/hoisting-javascript-WAyK8RmmlxX">https://viblo.asia/p/hoisting-javascript-WAyK8RmmlxX</a></p>
+<p><a href="https://niithanoi.edu.vn/hoisting-trong-javascript.html">https://niithanoi.edu.vn/hoisting-trong-javascript.html</a></p>
 <!-- raw HTML omitted -->
 
               
