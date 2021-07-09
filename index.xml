@@ -6,7 +6,22 @@
     <description>Recent content on Cuongth Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
-    <lastBuildDate>Fri, 12 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hungcuong97.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hungcuong97.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Scope và Closures trong JavaScript</title>
+      <link>https://hungcuong97.github.io/post/scope-closures/</link>
+      <pubDate>Sat, 20 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hungcuong97.github.io/post/scope-closures/</guid>
+      <description>Scope là gì? Scope là phạm vi mà một biến hoặc hàm từ một vị trí xác định trong code.
+Hiện nay, JavaScript có 3 loại scope:
+  Global Scope:
+Biến được khai báo globel (bên ngoài bất cứ function nào) thì sẽ có Global Scope.
+Biến global có thể được truy cập từ bất cứ đâu trong chương trình Javascript.
+  Function Scope:
+Biến đươck khai báo cục bộ (bên trong một function) thì sẽ có Function Scope.</description>
+    </item>
+    
     <item>
       <title>Hoisting trong JavaScript</title>
       <link>https://hungcuong97.github.io/post/hoisting/</link>
