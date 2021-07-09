@@ -8,42 +8,42 @@
 <meta name="generator" content="Hugo 0.83.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Trần Hùng Cường">
 <meta name="keywords" content="">
-<meta name="description" content="Scope là gì? Scope là phạm vi mà một biến hoặc hàm từ một vị trí xác định trong code.
+<meta name="description" content="Scope là gì? Scope là phạm vi truy cập của một biến hoặc hàm từ một vị trí xác định trong code.
 Hiện nay, JavaScript có 3 loại scope:
   Global Scope:
-Biến được khai báo globel (bên ngoài bất cứ function nào) thì sẽ có Global Scope.
+Biến được khai báo global (bên ngoài bất cứ function nào) thì sẽ có Global Scope.
 Biến global có thể được truy cập từ bất cứ đâu trong chương trình Javascript.
   Function Scope:
-Biến đươck khai báo cục bộ (bên trong một function) thì sẽ có Function Scope.">
+Biến được khai báo cục bộ (bên trong một function) thì sẽ có Function Scope.">
 
 
-<meta property="og:description" content="Scope là gì? Scope là phạm vi mà một biến hoặc hàm từ một vị trí xác định trong code.
+<meta property="og:description" content="Scope là gì? Scope là phạm vi truy cập của một biến hoặc hàm từ một vị trí xác định trong code.
 Hiện nay, JavaScript có 3 loại scope:
   Global Scope:
-Biến được khai báo globel (bên ngoài bất cứ function nào) thì sẽ có Global Scope.
+Biến được khai báo global (bên ngoài bất cứ function nào) thì sẽ có Global Scope.
 Biến global có thể được truy cập từ bất cứ đâu trong chương trình Javascript.
   Function Scope:
-Biến đươck khai báo cục bộ (bên trong một function) thì sẽ có Function Scope.">
+Biến được khai báo cục bộ (bên trong một function) thì sẽ có Function Scope.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Scope và Closures trong JavaScript">
 <meta name="twitter:title" content="Scope và Closures trong JavaScript">
 <meta property="og:url" content="https://hungcuong97.github.io/post/scope-closures/">
 <meta property="twitter:url" content="https://hungcuong97.github.io/post/scope-closures/">
 <meta property="og:site_name" content="Cuongth Blog">
-<meta property="og:description" content="Scope là gì? Scope là phạm vi mà một biến hoặc hàm từ một vị trí xác định trong code.
+<meta property="og:description" content="Scope là gì? Scope là phạm vi truy cập của một biến hoặc hàm từ một vị trí xác định trong code.
 Hiện nay, JavaScript có 3 loại scope:
   Global Scope:
-Biến được khai báo globel (bên ngoài bất cứ function nào) thì sẽ có Global Scope.
+Biến được khai báo global (bên ngoài bất cứ function nào) thì sẽ có Global Scope.
 Biến global có thể được truy cập từ bất cứ đâu trong chương trình Javascript.
   Function Scope:
-Biến đươck khai báo cục bộ (bên trong một function) thì sẽ có Function Scope.">
-<meta name="twitter:description" content="Scope là gì? Scope là phạm vi mà một biến hoặc hàm từ một vị trí xác định trong code.
+Biến được khai báo cục bộ (bên trong một function) thì sẽ có Function Scope.">
+<meta name="twitter:description" content="Scope là gì? Scope là phạm vi truy cập của một biến hoặc hàm từ một vị trí xác định trong code.
 Hiện nay, JavaScript có 3 loại scope:
   Global Scope:
-Biến được khai báo globel (bên ngoài bất cứ function nào) thì sẽ có Global Scope.
+Biến được khai báo global (bên ngoài bất cứ function nào) thì sẽ có Global Scope.
 Biến global có thể được truy cập từ bất cứ đâu trong chương trình Javascript.
   Function Scope:
-Biến đươck khai báo cục bộ (bên trong một function) thì sẽ có Function Scope.">
+Biến được khai báo cục bộ (bên trong một function) thì sẽ có Function Scope.">
 <meta property="og:locale" content="vi">
 
   
@@ -214,31 +214,36 @@ Biến đươck khai báo cục bộ (bên trong một function) thì sẽ có F
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
               <h2 id="span-stylefont-size-24ptstrongscope-là-gìstrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Scope là gì?<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
-<p><strong>Scope</strong> là phạm vi mà một <strong>biến</strong> hoặc <strong>hàm</strong> từ một vị trí xác định trong code.</p>
+<p><strong>Scope</strong> là phạm vi truy cập của một <strong>biến</strong> hoặc <strong>hàm</strong> từ một vị trí xác định trong code.</p>
 <p>Hiện nay, JavaScript có 3 loại scope:</p>
 <ul>
 <li>
 <p><strong>Global Scope</strong>:</p>
-<p>Biến được khai báo <strong>globel</strong> (bên ngoài bất cứ function nào) thì sẽ có <strong>Global Scope</strong>.</p>
+<p>Biến được khai báo <strong>global</strong> (bên ngoài bất cứ function nào) thì sẽ có <strong>Global Scope</strong>.</p>
 <p><img src="https://hungcuong97.github.io/images/scope-global.png" alt=""></p>
 <p>Biến <strong>global</strong> có thể được truy cập từ bất cứ đâu trong chương trình Javascript.</p>
 </li>
 <li>
 <p><strong>Function Scope</strong>:</p>
-<p>Biến đươck khai báo cục bộ (bên trong một function) thì sẽ có <strong>Function Scope</strong>.</p>
+<p>Biến được khai báo cục bộ (bên trong một function) thì sẽ có <strong>Function Scope</strong>.</p>
 <p><img src="https://hungcuong97.github.io/images/scope-function.png" alt=""></p>
 </li>
 <li>
-<p><strong>Block Scope</strong>:
-Trước ES2015(ES6) JavaScript không có <strong>Block Scope</strong></p>
-<p>Từ ES6 trở đi biến được khai báo bằng <strong>let</strong> hoặc <strong>const</strong> có <strong>Block Scope</strong>. Vì thế các biến bên ngoài block {} không thể được truy cập bên ngoài block.</p>
+<p><strong>Block Scope</strong>:</p>
+<p>Trước ES2015(ES6) JavaScript không có <strong>Block Scope</strong></p>
+<p>Từ ES6 trở đi,các biến được khai báo bằng <strong>let</strong> hoặc <strong>const</strong> có <strong>Block Scope</strong>. Vì thế các biến bên trong block {} không thể được truy cập từ bên ngoài block.</p>
 <p><img src="https://hungcuong97.github.io/images/scope-block.png" alt=""></p>
 <p>Biến được khai báo với <strong>var</strong> không có <strong>Block Scope</strong> nên có thể được truy cập từ bên ngoài block.
 <img src="https://hungcuong97.github.io/images/scope-block-var.png" alt=""></p>
 </li>
 </ul>
+<h2 id="span-stylefont-size-24ptstrongscope-chainstrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Scope Chain<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<p>Khi một biến được sử dụng trong JavaScript, thì JavaScript sẽ cố gắng tìm giá trị của biến trong phạm vị hiện tại.</p>
+<p>Nếu nó không thể tìm thấy biến, nó sẽ xem xét ở phạm vi bên ngoài và sẽ tiếp tục làm như vậy cho đến khi nó tìm thấy biến hoặc đến phạm vi toàn cục.</p>
+<p><img src="https://hungcuong97.github.io/images/scope-chain.png" alt=""></p>
 <h2 id="span-stylefont-size-24ptstrongtài-liệu-tham-khảostrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Tài liệu tham khảo<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
 <p><a href="https://xdevclass.com/hieu-sau-ve-hoisting-scope-trong-javascript/">https://xdevclass.com/hieu-sau-ve-hoisting-scope-trong-javascript/</a></p>
+<p><a href="https://duongdt0291.github.io/2021/01/js-concept-execution-context-hoisting-scope-and-closure-p1/">https://duongdt0291.github.io/2021/01/js-concept-execution-context-hoisting-scope-and-closure-p1/</a></p>
 
               
             </div>
