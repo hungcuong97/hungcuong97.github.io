@@ -8,25 +8,33 @@
 <meta name="generator" content="Hugo 0.83.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Trần Hùng Cường">
 <meta name="keywords" content="">
-<meta name="description" content="">
+<meta name="description" content="Từ khóa this là một trong những vẫn đề dễ gây hiểu nhầm và nhầm lẫn cho những người mới học JavaScript.
+Vậy this là gì? this là 1 biến chứa đường dẫn đến 1 object được gán khi 1 function được gọi, và chỉ được xác định dựa và ngữ cảnh (context) khi function đó được gọi.
+Để xác định được this một cách chính xác cần nhớ các quy tắc sau:">
 
 
-<meta property="og:description" content="">
+<meta property="og:description" content="Từ khóa this là một trong những vẫn đề dễ gây hiểu nhầm và nhầm lẫn cho những người mới học JavaScript.
+Vậy this là gì? this là 1 biến chứa đường dẫn đến 1 object được gán khi 1 function được gọi, và chỉ được xác định dựa và ngữ cảnh (context) khi function đó được gọi.
+Để xác định được this một cách chính xác cần nhớ các quy tắc sau:">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript: This">
-<meta name="twitter:title" content="JavaScript: This">
+<meta property="og:title" content="JavaScript: This là gì?">
+<meta name="twitter:title" content="JavaScript: This là gì?">
 <meta property="og:url" content="https://hungcuong97.github.io/post/js-this/">
 <meta property="twitter:url" content="https://hungcuong97.github.io/post/js-this/">
 <meta property="og:site_name" content="Cuongth Blog">
-<meta property="og:description" content="">
-<meta name="twitter:description" content="">
+<meta property="og:description" content="Từ khóa this là một trong những vẫn đề dễ gây hiểu nhầm và nhầm lẫn cho những người mới học JavaScript.
+Vậy this là gì? this là 1 biến chứa đường dẫn đến 1 object được gán khi 1 function được gọi, và chỉ được xác định dựa và ngữ cảnh (context) khi function đó được gọi.
+Để xác định được this một cách chính xác cần nhớ các quy tắc sau:">
+<meta name="twitter:description" content="Từ khóa this là một trong những vẫn đề dễ gây hiểu nhầm và nhầm lẫn cho những người mới học JavaScript.
+Vậy this là gì? this là 1 biến chứa đường dẫn đến 1 object được gán khi 1 function được gọi, và chỉ được xác định dựa và ngữ cảnh (context) khi function đó được gọi.
+Để xác định được this một cách chính xác cần nhớ các quy tắc sau:">
 <meta property="og:locale" content="vi">
 
   
-    <meta property="article:published_time" content="2021-02-12T00:00:00">
+    <meta property="article:published_time" content="2021-02-25T00:00:00">
   
   
-    <meta property="article:modified_time" content="2021-02-12T00:00:00">
+    <meta property="article:modified_time" content="2021-02-25T00:00:00">
   
   
   
@@ -53,7 +61,7 @@
   <meta property="twitter:image" content="https://hungcuong97.github.io/images/avatar.jpg">
 
 
-    <title>JavaScript: This</title>
+    <title>JavaScript: This là gì?</title>
 
     <link rel="icon" href="https://hungcuong97.github.io/favicon.png">
     
@@ -170,15 +178,15 @@
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      JavaScript: This
+      JavaScript: This là gì?
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2021-02-12T00:00:00Z">
+      <time itemprop="datePublished" datetime="2021-02-25T00:00:00Z">
         
-  tháng 2 12, 2021
+  tháng 2 25, 2021
 
       </time>
     
@@ -189,7 +197,31 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              
+              <p>Từ khóa <strong>this</strong> là một trong những vẫn đề dễ gây hiểu nhầm và nhầm lẫn cho những người mới học JavaScript.</p>
+<h2 id="span-stylefont-size-24ptstrongvậy-this-là-gìstrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Vậy this là gì?<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<p><strong>this</strong> là 1 biến chứa đường dẫn đến 1 object được gán khi 1 function được gọi, và chỉ được xác định dựa và ngữ cảnh (context) khi function đó được gọi.</p>
+<p>Để xác định được <strong>this</strong> một cách chính xác cần nhớ các quy tắc sau:</p>
+<p><strong>1. Global binding</strong>: Gọi 1 function ở ngữ cảnh toàn cục</p>
+<p><strong>Với chế độ non-strict mode</strong>: <strong>this</strong> của function đó sẽ là biến <strong>global</strong> (tùy môi trường có tên gọi khác nhau, <strong>window</strong> ở browser, <strong>global</strong> ở nodeJS).</p>
+<p><img src="https://hungcuong97.github.io/images/this-global.png" alt=""></p>
+<p><strong>Với chế độ strict mode</strong>: <strong>this</strong> của function đó sẽ là <strong>undefined</strong>.</p>
+<p><img src="https://hungcuong97.github.io/images/this-global-strict.png" alt=""></p>
+<p><strong>&ndash;&gt; Lưu ý:</strong> Trong ví dụ trên, <strong>this</strong> là <strong>undefined</strong> vì f2() được gọi 1 cách trực tiếp và không phải là một phương thức hoặc thuộc tính của một đối tượng (ví dụ window.f2())</p>
+<p><strong>2. Implicit binding</strong></p>
+<p>Khi một hàm được gọi như là một phương thức của đối tượng, <strong>this</strong> được đặt thành đối tượng (gần nhất) mà có phương thức được gọi trên.</p>
+<p><img src="https://hungcuong97.github.io/images/this-implicit.png" alt=""></p>
+<p><strong>3. Explicit binding</strong></p>
+<p>Có thể khai báo trực tiếp giá trị cho <strong>this</strong> khi gọi 1 function bằng cách sử dụng bộ ba <strong>apply</strong>, <strong>call</strong>, <strong>bind</strong> . Đây là 3 method thuộc về Function.prototype.</p>
+<p><img src="https://hungcuong97.github.io/images/this-explicit.png" alt=""></p>
+<p><strong>&ndash;&gt;Lưu ý:</strong> với <strong>bind()</strong>, <strong>this</strong> sẽ bị ràng buộc vĩnh viễn với đối số đầu tiên của bind (luôn phụ thuộc vào obj2- ví dụ trên), bất kể các hàm được sử dụng thế nào…</p>
+<p><strong>4. New binding</strong></p>
+<p><img src="https://hungcuong97.github.io/images/this-new.png" alt=""></p>
+<p><strong>5. Arrow function</strong></p>
+<p><strong>Arrow function</strong> không định nghĩa giá trị <strong>this</strong> của riêng nó giống như function. Hay có thể hiểu là EC (execution context) được tạo khi arrow function được gọi không xác định giá trị của <strong>this</strong> , thay vào đó nó lấy EC (execution context) gần nhất có <strong>this</strong> để lấy <strong>this</strong> đó về làm <strong>this</strong> của mình.</p>
+<p><img src="https://hungcuong97.github.io/images/this-arrow-function1.png" alt=""></p>
+<p><img src="https://hungcuong97.github.io/images/this-arrow-function1.png" alt=""></p>
+<h2 id="span-stylefont-size-24ptstrongtài-liệu-tham-khảostrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Tài liệu tham khảo<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+
               
             </div>
           </div>
@@ -214,7 +246,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://hungcuong97.github.io/post/js-hoisting/" data-tooltip="JavaScript: Hoisting">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">Tiếp</span>
@@ -222,7 +254,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hungcuong97.github.io/post/js-scope-closures/" data-tooltip="JavaScript: Scope và Closure">
               
                   <span class="hide-xs hide-sm text-small icon-mr">Trước</span>
                   <i class="fa fa-angle-right"></i>
@@ -300,7 +332,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://hungcuong97.github.io/post/js-hoisting/" data-tooltip="JavaScript: Hoisting">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">Tiếp</span>
@@ -308,7 +340,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hungcuong97.github.io/post/js-scope-closures/" data-tooltip="JavaScript: Scope và Closure">
               
                   <span class="hide-xs hide-sm text-small icon-mr">Trước</span>
                   <i class="fa fa-angle-right"></i>

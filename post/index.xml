@@ -6,7 +6,18 @@
     <description>Recent content in Posts on Cuongth Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
-    <lastBuildDate>Sat, 20 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hungcuong97.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hungcuong97.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript: This là gì?</title>
+      <link>https://hungcuong97.github.io/post/js-this/</link>
+      <pubDate>Thu, 25 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hungcuong97.github.io/post/js-this/</guid>
+      <description>Từ khóa this là một trong những vẫn đề dễ gây hiểu nhầm và nhầm lẫn cho những người mới học JavaScript.
+Vậy this là gì? this là 1 biến chứa đường dẫn đến 1 object được gán khi 1 function được gọi, và chỉ được xác định dựa và ngữ cảnh (context) khi function đó được gọi.
+Để xác định được this một cách chính xác cần nhớ các quy tắc sau:</description>
+    </item>
+    
     <item>
       <title>JavaScript: Scope và Closure</title>
       <link>https://hungcuong97.github.io/post/js-scope-closures/</link>
@@ -30,15 +41,6 @@ Biến được khai báo cục bộ (bên trong một function) thì sẽ có F
       <guid>https://hungcuong97.github.io/post/js-hoisting/</guid>
       <description>Hoisting là gì? Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến hoặc hàm (function declaration) được chuyển lên trên đầu để compiled hay thực thi code.
   Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined. Trong function sayHi(), chúng ta khai báo biến name với từ khóa var =&amp;gt; hoisting đã xảy ra, JavaScript đã chuyển phần khai báo biến lên đầu và gán giá trị cho name là undefined.</description>
-    </item>
-    
-    <item>
-      <title>JavaScript: This</title>
-      <link>https://hungcuong97.github.io/post/js-this/</link>
-      <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://hungcuong97.github.io/post/js-this/</guid>
-      <description></description>
     </item>
     
   </channel>
