@@ -6,14 +6,15 @@
     <description>Recent content on Cuongth Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
-    <lastBuildDate>Wed, 13 May 2015 00:00:00 +0000</lastBuildDate><atom:link href="https://hungcuong97.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hungcuong97.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Cover image showcase</title>
-      <link>https://hungcuong97.github.io/post/cover-image-showcase/</link>
-      <pubDate>Wed, 13 May 2015 00:00:00 +0000</pubDate>
+      <title>Hoisting trong JavaScript</title>
+      <link>https://hungcuong97.github.io/post/hoisting/</link>
+      <pubDate>Fri, 12 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://hungcuong97.github.io/post/cover-image-showcase/</guid>
-      <description>&lt;p&gt;Tranquilpeak integrate a unique &amp;ldquo;cover image&amp;rdquo; feature. Open this post to see how this feature sublimate your article.&lt;/p&gt;</description>
+      <guid>https://hungcuong97.github.io/post/hoisting/</guid>
+      <description>Hoisting là một hành vi mặc định của javaScript, cho phép các khai báo biến (khai báo bằng var) hoặc** hàm** (function declaration) được chuyển lên trên đầu để **compiled** hay **thực thi code.**
+  Với biến (khai báo bằng var): JavaScript sẽ chỉ chuyển phần khai báo biến lên đầu (tức phần gán giá trị vẫn giữ nguyên thứ tự) và gán cho giá trị undefined.   Với hàm (function declaration): JavaScript sẽ chuyển phần khai báo hàm lên đầu và gán giá trị là** đường dẫn đến function trong bộ nhớ** (tức giá trị function được lưu luôn ở giai đoạn này, khác với viết chỉ có tên).</description>
     </item>
     
   </channel>
