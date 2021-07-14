@@ -6,7 +6,18 @@
     <description>Recent content on Cuongth Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
-    <lastBuildDate>Thu, 25 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hungcuong97.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hungcuong97.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript: Phân biệt Call, Apply và Bind</title>
+      <link>https://hungcuong97.github.io/post/js-callbindapply/</link>
+      <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hungcuong97.github.io/post/js-callbindapply/</guid>
+      <description>Từ khóa this là một khái niệm rất quan trong trong JavaScript. Việc xác định giá trị của this là một chủ đề gây nhức não cho không chỉ những người mới bắt đầu học JS mà ngay cả đổi với những người đã có kinh nghiêm.
+Vậy có cách nào để chúng ta có thể gán giá trị cho this không?
+Call(), Apply() và Bind() method Ta có thể tự gán giá trị của this thông qua các method call(), apply(), bind().</description>
+    </item>
+    
     <item>
       <title>JavaScript: This là gì?</title>
       <link>https://hungcuong97.github.io/post/js-this/</link>

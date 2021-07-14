@@ -8,33 +8,33 @@
 <meta name="generator" content="Hugo 0.83.1 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="Trần Hùng Cường">
 <meta name="keywords" content="">
-<meta name="description" content="Từ khóa this là một trong những vẫn đề dễ gây hiểu nhầm và nhầm lẫn cho những người mới học JavaScript.
-Vậy this là gì? this là 1 biến chứa đường dẫn đến 1 object được gán khi 1 function được gọi, và chỉ được xác định dựa và ngữ cảnh (context) khi function đó được gọi.
-Để xác định được this một cách chính xác cần nhớ các quy tắc sau:">
+<meta name="description" content="Từ khóa this là một khái niệm rất quan trong trong JavaScript. Việc xác định giá trị của this là một chủ đề gây nhức não cho không chỉ những người mới bắt đầu học JS mà ngay cả đổi với những người đã có kinh nghiêm.
+Vậy có cách nào để chúng ta có thể gán giá trị cho this không?
+Call(), Apply() và Bind() method Ta có thể tự gán giá trị của this thông qua các method call(), apply(), bind().">
 
 
-<meta property="og:description" content="Từ khóa this là một trong những vẫn đề dễ gây hiểu nhầm và nhầm lẫn cho những người mới học JavaScript.
-Vậy this là gì? this là 1 biến chứa đường dẫn đến 1 object được gán khi 1 function được gọi, và chỉ được xác định dựa và ngữ cảnh (context) khi function đó được gọi.
-Để xác định được this một cách chính xác cần nhớ các quy tắc sau:">
+<meta property="og:description" content="Từ khóa this là một khái niệm rất quan trong trong JavaScript. Việc xác định giá trị của this là một chủ đề gây nhức não cho không chỉ những người mới bắt đầu học JS mà ngay cả đổi với những người đã có kinh nghiêm.
+Vậy có cách nào để chúng ta có thể gán giá trị cho this không?
+Call(), Apply() và Bind() method Ta có thể tự gán giá trị của this thông qua các method call(), apply(), bind().">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript: This là gì?">
-<meta name="twitter:title" content="JavaScript: This là gì?">
-<meta property="og:url" content="https://hungcuong97.github.io/post/js-this/">
-<meta property="twitter:url" content="https://hungcuong97.github.io/post/js-this/">
+<meta property="og:title" content="JavaScript: Phân biệt Call, Apply và Bind">
+<meta name="twitter:title" content="JavaScript: Phân biệt Call, Apply và Bind">
+<meta property="og:url" content="https://hungcuong97.github.io/post/js-callbindapply/">
+<meta property="twitter:url" content="https://hungcuong97.github.io/post/js-callbindapply/">
 <meta property="og:site_name" content="Cuongth Blog">
-<meta property="og:description" content="Từ khóa this là một trong những vẫn đề dễ gây hiểu nhầm và nhầm lẫn cho những người mới học JavaScript.
-Vậy this là gì? this là 1 biến chứa đường dẫn đến 1 object được gán khi 1 function được gọi, và chỉ được xác định dựa và ngữ cảnh (context) khi function đó được gọi.
-Để xác định được this một cách chính xác cần nhớ các quy tắc sau:">
-<meta name="twitter:description" content="Từ khóa this là một trong những vẫn đề dễ gây hiểu nhầm và nhầm lẫn cho những người mới học JavaScript.
-Vậy this là gì? this là 1 biến chứa đường dẫn đến 1 object được gán khi 1 function được gọi, và chỉ được xác định dựa và ngữ cảnh (context) khi function đó được gọi.
-Để xác định được this một cách chính xác cần nhớ các quy tắc sau:">
+<meta property="og:description" content="Từ khóa this là một khái niệm rất quan trong trong JavaScript. Việc xác định giá trị của this là một chủ đề gây nhức não cho không chỉ những người mới bắt đầu học JS mà ngay cả đổi với những người đã có kinh nghiêm.
+Vậy có cách nào để chúng ta có thể gán giá trị cho this không?
+Call(), Apply() và Bind() method Ta có thể tự gán giá trị của this thông qua các method call(), apply(), bind().">
+<meta name="twitter:description" content="Từ khóa this là một khái niệm rất quan trong trong JavaScript. Việc xác định giá trị của this là một chủ đề gây nhức não cho không chỉ những người mới bắt đầu học JS mà ngay cả đổi với những người đã có kinh nghiêm.
+Vậy có cách nào để chúng ta có thể gán giá trị cho this không?
+Call(), Apply() và Bind() method Ta có thể tự gán giá trị của this thông qua các method call(), apply(), bind().">
 <meta property="og:locale" content="vi">
 
   
-    <meta property="article:published_time" content="2021-02-25T00:00:00">
+    <meta property="article:published_time" content="2021-03-02T00:00:00">
   
   
-    <meta property="article:modified_time" content="2021-02-25T00:00:00">
+    <meta property="article:modified_time" content="2021-03-02T00:00:00">
   
   
   
@@ -61,14 +61,14 @@ Vậy this là gì? this là 1 biến chứa đường dẫn đến 1 object đ�
   <meta property="twitter:image" content="https://hungcuong97.github.io/images/avatar.jpg">
 
 
-    <title>JavaScript: This là gì?</title>
+    <title>JavaScript: Phân biệt Call, Apply và Bind</title>
 
     <link rel="icon" href="https://hungcuong97.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://hungcuong97.github.io/post/js-this/">
+    <link rel="canonical" href="https://hungcuong97.github.io/post/js-callbindapply/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -178,15 +178,15 @@ Vậy this là gì? this là 1 biến chứa đường dẫn đến 1 object đ�
             <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      JavaScript: This là gì?
+      JavaScript: Phân biệt Call, Apply và Bind
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2021-02-25T00:00:00Z">
+      <time itemprop="datePublished" datetime="2021-03-02T00:00:00Z">
         
-  tháng 2 25, 2021
+  tháng 3 2, 2021
 
       </time>
     
@@ -197,33 +197,26 @@ Vậy this là gì? this là 1 biến chứa đường dẫn đến 1 object đ�
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>Từ khóa <strong>this</strong> là một trong những vẫn đề dễ gây hiểu nhầm và nhầm lẫn cho những người mới học JavaScript.</p>
-<h2 id="span-stylefont-size-24ptstrongvậy-this-là-gìstrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Vậy this là gì?<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
-<p><strong>this</strong> là 1 biến chứa đường dẫn đến 1 object được gán khi 1 function được gọi, và chỉ được xác định dựa và ngữ cảnh (context) khi function đó được gọi.</p>
-<p>Để xác định được <strong>this</strong> một cách chính xác cần nhớ các quy tắc sau:</p>
-<p><strong>1. Global binding</strong>: Gọi 1 function ở ngữ cảnh toàn cục</p>
-<p><strong>Với chế độ non-strict mode</strong>: <strong>this</strong> của function đó sẽ là biến <strong>global</strong> (tùy môi trường có tên gọi khác nhau, <strong>window</strong> ở browser, <strong>global</strong> ở nodeJS).</p>
-<p><img src="https://hungcuong97.github.io/images/this-global.png" alt=""></p>
-<p><strong>Với chế độ strict mode</strong>: <strong>this</strong> của function đó sẽ là <strong>undefined</strong>.</p>
-<p><img src="https://hungcuong97.github.io/images/this-global-strict.png" alt=""></p>
-<p><strong>&ndash;&gt; Lưu ý:</strong> Trong ví dụ trên, <strong>this</strong> là <strong>undefined</strong> vì f2() được gọi 1 cách trực tiếp và không phải là một phương thức hoặc thuộc tính của một đối tượng (ví dụ window.f2())</p>
-<p><strong>2. Implicit binding</strong></p>
-<p>Khi một hàm được gọi như là một phương thức của đối tượng, <strong>this</strong> được đặt thành đối tượng (gần nhất) mà có phương thức được gọi trên.</p>
-<p><img src="https://hungcuong97.github.io/images/this-implicit.png" alt=""></p>
-<p><strong>3. Explicit binding</strong></p>
-<p>Có thể khai báo trực tiếp giá trị cho <strong>this</strong> khi gọi 1 function bằng cách sử dụng bộ ba <strong>apply</strong>, <strong>call</strong>, <strong>bind</strong> . Đây là 3 method thuộc về Function.prototype.</p>
-<p><img src="https://hungcuong97.github.io/images/this-explicit.png" alt=""></p>
-<p><strong>&ndash;&gt;Lưu ý:</strong> với <strong>bind()</strong>, <strong>this</strong> sẽ bị ràng buộc vĩnh viễn với đối số đầu tiên của bind (luôn phụ thuộc vào obj2- ví dụ trên), bất kể các hàm được sử dụng thế nào…</p>
-<p><strong>4. New binding</strong></p>
-<p><img src="https://hungcuong97.github.io/images/this-new.png" alt=""></p>
-<p><strong>5. Arrow function</strong></p>
-<p><strong>Arrow function</strong> không định nghĩa giá trị <strong>this</strong> của riêng nó giống như function. Hay có thể hiểu là EC (execution context) được tạo khi arrow function được gọi không xác định giá trị của <strong>this</strong> , thay vào đó nó lấy EC (execution context) gần nhất có <strong>this</strong> để lấy <strong>this</strong> đó về làm <strong>this</strong> của mình.</p>
-<p><img src="https://hungcuong97.github.io/images/this-arrow-function1.png" alt=""></p>
-<p><img src="https://hungcuong97.github.io/images/this-arrow-function2.png" alt=""></p>
+              <p>Từ khóa <strong>this</strong> là một khái niệm rất quan trong trong JavaScript. Việc xác định giá trị của <strong>this</strong> là một chủ đề gây nhức não cho không chỉ những người mới bắt đầu học JS mà ngay cả đổi với những người đã có kinh nghiêm.</p>
+<p>Vậy có cách nào để chúng ta có thể gán giá trị cho <strong>this</strong> không?</p>
+<h2 id="span-stylefont-size-24ptstrongcall-apply-và-bind-methodstrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Call(), Apply() và Bind() method<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<p>Ta có thể tự gán giá trị của <strong>this</strong> thông qua các method <strong>call()</strong>, <strong>apply()</strong>, <strong>bind()</strong>. Và khi đó ta gọi <strong>this</strong> được gọi thông qua Explicity context.</p>
+<h2 id="span-stylefont-size-18ptstrongcallstrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Call()<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<p>Gọi hàm, cho phép truyền vào một object và các đối số phân cách nhau bời dấu phẩy.</p>
+<p><img src="https://hungcuong97.github.io/images/call-function.png" alt=""></p>
+<h2 id="span-stylefont-size-18ptstrongapplystrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Apply()<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<p>Gọi hàm, cho phép truyền vào một object và các đối số thông qua mảng(Array).</p>
+<p><img src="https://hungcuong97.github.io/images/apply-function.png" alt=""></p>
+<h2 id="span-stylefont-size-18ptstrongbindstrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Bind()<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<p>Trả về một hàm mới, cho phép truyền vào một object và các đối số phân cách nhau bởi dấu phẩy.</p>
+<p><img src="https://hungcuong97.github.io/images/bind-function.png" alt=""></p>
+<h2 id="span-stylefont-size-24ptstrongkết-luậnstrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Kết luận<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
+<p>Hàm <strong>call</strong> và <strong>apply</strong> là gần giống nhau. Chúng đều gọi hàm trực tiếp. Chỉ khác nhau ở cách truyền tham số vào (với <strong>call</strong> thì các đối số phân cách nhau bởi dấu phẩy, với <strong>apply</strong> thì các đối số cho bởi mảng).</p>
+<p>Hàm <strong>bind</strong> không gọi hàm trực tiếp mà sẽ trả về một hàm mới. Các tham số truyền vào được phần cách nhau bởi dấu phẩy.</p>
+<p>Sử dụng <strong>Bind()</strong> khi muốn hàm đó sau này được gọi với một ngữ cảnh nhất định.</p>
+<p>Sử dụng <strong>call()</strong> và <strong>apply()</strong> khi muốn gọi hàm ngay lập tức và muốn sửa đổi ngữ cảnh (context).</p>
 <h2 id="span-stylefont-size-24ptstrongtài-liệu-tham-khảostrongspan"><!-- raw HTML omitted --><!-- raw HTML omitted -->Tài liệu tham khảo<!-- raw HTML omitted --><!-- raw HTML omitted --></h2>
-<p><a href="https://viblo.asia/p/nhung-dieu-co-the-ban-chua-biet-ve-this-trong-javascript-GrLZDkqnKk0">https://viblo.asia/p/nhung-dieu-co-the-ban-chua-biet-ve-this-trong-javascript-GrLZDkqnKk0</a></p>
-<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this?retiredLocale=vi">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this?retiredLocale=vi</a></p>
-<p><a href="https://duongdt0291.github.io/2021/01/js-concept-this-p2/">https://duongdt0291.github.io/2021/01/js-concept-this-p2/</a></p>
+<p><a href="https://codelearn.io/sharing/bind-call-va-apply-trong-javascript">https://codelearn.io/sharing/bind-call-va-apply-trong-javascript</a></p>
 
               
             </div>
@@ -249,7 +242,7 @@ Vậy this là gì? this là 1 biến chứa đường dẫn đến 1 object đ�
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://hungcuong97.github.io/post/js-callbindapply/" data-tooltip="JavaScript: Phân biệt Call, Apply và Bind">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">Tiếp</span>
@@ -257,7 +250,7 @@ Vậy this là gì? this là 1 biến chứa đường dẫn đến 1 object đ�
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://hungcuong97.github.io/post/js-scope-closures/" data-tooltip="JavaScript: Scope và Closure">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hungcuong97.github.io/post/js-this/" data-tooltip="JavaScript: This là gì?">
               
                   <span class="hide-xs hide-sm text-small icon-mr">Trước</span>
                   <i class="fa fa-angle-right"></i>
@@ -275,19 +268,19 @@ Vậy this là gì? this là 1 biến chứa đường dẫn đến 1 object đ�
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hungcuong97.github.io/post/js-this/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hungcuong97.github.io/post/js-callbindapply/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hungcuong97.github.io/post/js-this/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hungcuong97.github.io/post/js-callbindapply/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hungcuong97.github.io/post/js-this/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hungcuong97.github.io/post/js-callbindapply/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -335,7 +328,7 @@ Vậy this là gì? this là 1 biến chứa đường dẫn đến 1 object đ�
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://hungcuong97.github.io/post/js-callbindapply/" data-tooltip="JavaScript: Phân biệt Call, Apply và Bind">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">Tiếp</span>
@@ -343,7 +336,7 @@ Vậy this là gì? this là 1 biến chứa đường dẫn đến 1 object đ�
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://hungcuong97.github.io/post/js-scope-closures/" data-tooltip="JavaScript: Scope và Closure">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://hungcuong97.github.io/post/js-this/" data-tooltip="JavaScript: This là gì?">
               
                   <span class="hide-xs hide-sm text-small icon-mr">Trước</span>
                   <i class="fa fa-angle-right"></i>
@@ -361,19 +354,19 @@ Vậy this là gì? this là 1 biến chứa đường dẫn đến 1 object đ�
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hungcuong97.github.io/post/js-this/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://hungcuong97.github.io/post/js-callbindapply/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hungcuong97.github.io/post/js-this/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://hungcuong97.github.io/post/js-callbindapply/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hungcuong97.github.io/post/js-this/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://hungcuong97.github.io/post/js-callbindapply/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -403,19 +396,19 @@ Vậy this là gì? this là 1 biến chứa đường dẫn đến 1 object đ�
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhungcuong97.github.io%2Fpost%2Fjs-this%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhungcuong97.github.io%2Fpost%2Fjs-callbindapply%2F">
           <i class="fa fa-facebook-official"></i><span>Chia sẻ với Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhungcuong97.github.io%2Fpost%2Fjs-this%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fhungcuong97.github.io%2Fpost%2Fjs-callbindapply%2F">
           <i class="fa fa-twitter"></i><span>Chia sẻ với Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhungcuong97.github.io%2Fpost%2Fjs-this%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fhungcuong97.github.io%2Fpost%2Fjs-callbindapply%2F">
           <i class="fa fa-google-plus"></i><span>Chia sẻ với Google&#43;</span>
         </a>
       </li>
@@ -507,9 +500,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/hungcuong97.github.io\/post\/js-this\/';
+          this.page.url = 'https:\/\/hungcuong97.github.io\/post\/js-callbindapply\/';
           
-            this.page.identifier = '\/post\/js-this\/'
+            this.page.identifier = '\/post\/js-callbindapply\/'
           
         };
         (function() {
